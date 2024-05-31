@@ -33,6 +33,7 @@ export default function App() {
     <Authenticator>
       {({ signOut, user }) => (
     <main>
+      <h1>{user?.signInDetails?.loginId}'s todos</h1>
       <h1>My todos</h1>
       <button onClick={createTodo}>+ new</button>
       <ul>
@@ -44,10 +45,6 @@ export default function App() {
       </ul>
       <div>
         🥳 App successfully hosted. Try creating a new todo.
-        <br />
-        <a href="https://docs.amplify.aws/gen2/start/quickstart/nextjs-pages-router/">
-          Review next steps of this tutorial.
-        </a>
       </div>
       <button onClick={signOut}>Sign out</button>
     </main>
